@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Content</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--onload="onInit()" -->
+
+    <section class="login-screen">
+        <h2>Sign In</h2>
+        <br />
+        <form onsubmit="onLogin(event)">
+            <h4>Username:</h4>
+            <input type="text" placeholder="Enter Username" name="usernameTxt" />
+            <h4>Password:</h4>
+            <input type="password" placeholder="Enter Password" name="passwordTxt" />
+            <button class="login">Login</button>
+        </form>
+    </section>
+
+    <div class="secret-page">
+        <h2 class="welcome-user"></h2>
+        <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9"
+            alt="">
+        <br />
+        <button class="logout" onclick="hideSecretPage(), _clearLocalStorage()">Logout</button>
+        <a class="admin-link" href="admin.html">Admin Page</a>
+    </div>
+
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/service.js"></script>
+    <script src="js/main-controler.js"></script>
+</body>
+
+</html>

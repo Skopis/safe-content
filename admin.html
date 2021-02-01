@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="renderUsersTable()" >
+    
+    <section>
+        <p1 class="admin-filter">Filter</p1>
+        <select onchange="onSetFilter()" name="filterBy">
+            <option value="none">None</option>
+            <option value="name">Name</option>
+            <option value="last-login">Last Login</option>
+        </select>
+    </section>
+    
+<h1>Welcome, Admin</h1>
+    <div class="admin-page">
+        <h2 class="welcome-admin-user"></h2>
+        <table class="users-table">
+            <thead class="table-head">
+                <tr>
+                    <td>id</td>
+                    <td>userName</td>
+                    <td>password</td>
+                    <td>lastLoginTime</td>
+                    <td>isAdmin</td>
+                </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+        </table>
+        <button class="logout" onclick="goBackToLoginPage(), _clearLocalStorage()">Logout</button>
+    </div>
+
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/service.js"></script>
+    <script src="js/main-controler.js"></script>
+</body>
+
+</html>
